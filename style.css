@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+}
+
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 10px 0 10px 0;
+    background: black;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-left: 25px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    opacity: 0.7;
+}
+
+section .title {
+    position: relative;
+    padding: 60px 0 20px 0;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.project .project-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 90px;
+}
+
+
+/* menu button styling */
+
+.menu-btn {
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: yellow;
+    right: 35px;
+    bottom: 15px;
+    text-align: center;
+    line-height: 45px;
+    color: black;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 35px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Home Section Styling */
+
+.home {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("pictures/satrya.JPG") no-repeat center top;
+    background-size: cover;
+    display: flex;
+    height: auto;
+    color: white;
+    flex-direction: column;
+    justify-content: stretch;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home .container {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 35px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: yellow;
+    font-weight: 300;
+}
+
+
+/* About Section Styling */
+
+.about {
+    background: #F0F2F7;
+}
+
+.about .about-content .left {
+    width: 45%;
+    float: left;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .about-content .right {
+    width: 55%;
+    float: right;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    padding-left: 0;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: black;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.5s ease;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.about .about-content .right a:hover {
+    color: black;
+    background: none;
+}
+
+
+/* Project Styling */
+
+.project {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("pictures/project.jpg") no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+.project .project-content .card {
+    width: calc(30% - 20px);
+    background: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 25px 25px 25px 25px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.project .project-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project .project-content .project-title {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 20px 0 20px 0;
+}
+
+.project .project-content button {
+    background: white;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.project .project-content button:hover {
+    background: none;
+    color: white;
+}
+
+
+/* Skills Styling */
+
+.skills {
+    background: #F0F2F7;
+}
+
+.skills .skills-content .skill-box {
+    width: calc(20% - 15px);
+    background: none;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.skills .skills-content img {
+    width: 70%;
+    height: 100%;
+}
+
+.skills .skills-content .skill-box .skill-title {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0 20px 0;
+}
+
+
+/* Contact Styling */
+
+.contact {
+    background: black;
+    color: white;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+    font-family: "Poppins", sans-serif;
+}
+
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: white;
+}
+
+.contact .contact-content .info .contact-info a {
+    color: white;
+}
+
+.contact .contact-content .info .contact-info a:hover {
+    color: lightgray;
+    text-decoration: underline;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border-color: #b3b3b3;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button-area {
+    display: flex;
+    align-items: center;
+}
+
+.right form .button-area button {
+    color: black;
+    display: block;
+    width: 120px!important;
+    height: 45px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: white;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover {
+    color: white;
+    background: none;
+}
+
+
+/* Footer Styling */
+
+footer {
+    background: #F0F2F7;
+    padding: 15px 23px;
+    color: black;
+    text-align: center;
+}
+
+footer span {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+
+/* responsive media query start */
+
+@media (max-width: 1300px) {
+    home .container {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .container {
+        padding: 0 50px;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+    .container {
+        max-width: 800px;
+    }
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100%;
+    }
+    .project .project-content {
+        justify-content: space-around;
+    }
+    .project .project-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content {
+        justify-content: space-around;
+    }
+    .skills .skills-content .skill-box {
+        width: 50%;
+    }
+    .contact .contact-content .column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .home .home-content .text-1 {
+        font-size: 15px;
+    }
+    .home .home-content .text-2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .home .home-content .text-3 {
+        font-size: 20px;
+    }
+    .about .about-content .right .text {
+        font-size: 19px;
+    }
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+    .right form .error-box {
+        width: 150px;
+    }
+    .skills .skills-content .skill-box {
+        width: 40%;
+    }
+    .project .project-content .card {
+        width: 100%;
+    }
+}
